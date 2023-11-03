@@ -17,8 +17,9 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-        //Create: Crear Empleado
-        //[Route("")]
+
+
+
         [HttpPost]
         public IActionResult Post(
             [FromBody] Empleado empleado)
@@ -27,8 +28,9 @@ namespace WebApplication2.Controllers
             _aplicacionContexto.SaveChanges();
             return Ok(empleado);
         }
-        //READ: Obtener lista de Empleado
-        //[Route("")]
+
+
+
         [HttpGet]
 
         public IEnumerable<Empleado> Get()
@@ -36,8 +38,9 @@ namespace WebApplication2.Controllers
             return _aplicacionContexto.Empleados.ToList();
         }
 
-        //Update: Modificar Empleado
-        //[Route("/id")]
+
+
+
         [HttpPut]
         public IActionResult Put([FromBody] Empleado empleado)
         {
@@ -46,8 +49,9 @@ namespace WebApplication2.Controllers
             return Ok(empleado);
 
         }
-        //Delete: Eliminar Empleado
-        //[Route("/id")]
+
+
+
         [HttpDelete]
         public IActionResult Delete(int empleadoID)
         {
