@@ -17,9 +17,9 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-
-
-
+        
+        //Create: Crear Salario
+        //[Route("")]
         [HttpPost]
         public IActionResult Post(
             [FromBody] Salario salario)
@@ -29,7 +29,8 @@ namespace WebApplication2.Controllers
             return Ok(salario);
         }
 
-
+        //READ: Obtener lista de Salario
+        //[Route("")]
 
         [HttpGet]
 
@@ -39,7 +40,8 @@ namespace WebApplication2.Controllers
         }
 
 
-
+        //Update: Modificar Salario
+        //[Route("/id")]
 
         [HttpPut]
         public IActionResult Put([FromBody] Salario salario)
@@ -50,7 +52,8 @@ namespace WebApplication2.Controllers
 
         }
 
-
+        //Delete: Eliminar Salario
+        //[Route("/id")]
 
         [HttpDelete]
         public IActionResult Delete(int salarioID)
