@@ -36,7 +36,7 @@ namespace WebApplication2.Controllers
             return _aplicacionContexto.Titulos.ToList();
         }
 
-        //Update: Modificar estudiantes
+        //Update: Modificar titulo
         //[Route("/id")]
         [HttpPut]
         public IActionResult Put([FromBody] Titulo titulo)
