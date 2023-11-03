@@ -18,7 +18,8 @@ namespace WebApplication2.Controllers
             _aplicacionContexto = aplicacionContexto;
         }
 
-
+        //Create: Crear Empleado
+        //[Route("")]
 
         [HttpPost]
         public IActionResult Post(
@@ -29,7 +30,8 @@ namespace WebApplication2.Controllers
             return Ok(empleado);
         }
 
-
+        //READ: Obtener lista de Empleado
+        //[Route("")]
 
         [HttpGet]
 
@@ -40,7 +42,8 @@ namespace WebApplication2.Controllers
 
 
 
-
+        //Update: Modificar Empleado
+        //[Route("/id")]
         [HttpPut]
         public IActionResult Put([FromBody] Empleado empleado)
         {
@@ -50,7 +53,8 @@ namespace WebApplication2.Controllers
 
         }
 
-
+        //Delete: Eliminar Empleado
+        //[Route("/id")]
 
         [HttpDelete]
         public IActionResult Delete(int empleadoID)
