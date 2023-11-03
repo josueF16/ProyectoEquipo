@@ -17,7 +17,7 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-        //Create: Crear estudiantes
+        //Create: Crear titulo
         //[Route("")]
         [HttpPost]
         public IActionResult Post(
@@ -27,7 +27,7 @@ namespace WebApplication2.Controllers
             _aplicacionContexto.SaveChanges();
             return Ok(titulo);
         }
-        //READ: Obtener lista de estudiantes
+        //READ: Obtener lista de titulo
         //[Route("")]
         [HttpGet]
 
@@ -46,7 +46,7 @@ namespace WebApplication2.Controllers
             return Ok(titulo);
 
         }
-        //Delete: Eliminar estudiantes
+        //Delete: Eliminar titulo
         //[Route("/id")]
         [HttpDelete]
         public IActionResult Delete(int tituloID)
