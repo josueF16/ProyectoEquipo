@@ -36,7 +36,7 @@ namespace WebApplication2.Controllers
             return _aplicacionContexto.Departamentos.ToList();
         }
 
-        //Update: Modificar estudiantes
+        //Update: Modificar departamento
         //[Route("/id")]
         [HttpPut]
         public IActionResult Put([FromBody] Departamento departamento)
