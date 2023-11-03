@@ -17,7 +17,7 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-        //Create: Crear estudiantes
+        //Create: Crear Salario
         //[Route("")]
         [HttpPost]
         public IActionResult Post(
@@ -27,7 +27,7 @@ namespace WebApplication2.Controllers
             _aplicacionContexto.SaveChanges();
             return Ok(salario);
         }
-        //READ: Obtener lista de estudiantes
+        //READ: Obtener lista de Salario
         //[Route("")]
         [HttpGet]
 
@@ -36,7 +36,7 @@ namespace WebApplication2.Controllers
             return _aplicacionContexto.Salarios.ToList();
         }
 
-        //Update: Modificar estudiantes
+        //Update: Modificar Salario
         //[Route("/id")]
         [HttpPut]
         public IActionResult Put([FromBody] Salario salario)
@@ -46,7 +46,7 @@ namespace WebApplication2.Controllers
             return Ok(salario);
 
         }
-        //Delete: Eliminar estudiantes
+        //Delete: Eliminar Salario
         //[Route("/id")]
         [HttpDelete]
         public IActionResult Delete(int salarioID)
