@@ -17,7 +17,7 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-        //Create: Crear estudiantes
+        //Create: Crear departamento
         //[Route("")]
         [HttpPost]
         public IActionResult Post(
@@ -27,7 +27,7 @@ namespace WebApplication2.Controllers
             _aplicacionContexto.SaveChanges();
             return Ok(departamento);
         }
-        //READ: Obtener lista de estudiantes
+        //READ: Obtener lista de departamentos
         //[Route("")]
         [HttpGet]
 
@@ -36,7 +36,7 @@ namespace WebApplication2.Controllers
             return _aplicacionContexto.Departamentos.ToList();
         }
 
-        //Update: Modificar estudiantes
+        //Update: Modificar departamentos
         //[Route("/id")]
         [HttpPut]
         public IActionResult Put([FromBody] Departamento departamento)
@@ -46,7 +46,7 @@ namespace WebApplication2.Controllers
             return Ok(departamento);
 
         }
-        //Delete: Eliminar estudiantes
+        //Delete: Eliminar departamentos
         //[Route("/id")]
         [HttpDelete]
         public IActionResult Delete(int departamentoID)
