@@ -8,6 +8,7 @@ namespace WebApplication2.Models
         public int IdTitulo { get; set; }
         public string titulo { get; set; }
         public string Descripcion { get; set; }
+        public int IdEmpleado { get; set; }
 
     }
 }
