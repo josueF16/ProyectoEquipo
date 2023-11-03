@@ -17,7 +17,8 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-
+        //Create: Crear titulo
+        //[Route("")]
         [HttpPost]
         public IActionResult Post(
             [FromBody] Titulo titulo)
@@ -26,15 +27,17 @@ namespace WebApplication2.Controllers
             _aplicacionContexto.SaveChanges();
             return Ok(titulo);
         }
-
+        
+        //READ: Obtener lista de titulo
+        //[Route("")]
         [HttpGet]
-
         public IEnumerable<Titulo> Get()
         {
             return _aplicacionContexto.Titulos.ToList();
         }
 
-
+        //Update: Modificar titulo
+        //[Route("/id")]
         [HttpPut]
         public IActionResult Put([FromBody] Titulo titulo)
         {
@@ -43,7 +46,8 @@ namespace WebApplication2.Controllers
             return Ok(titulo);
 
         }
-
+        //Delete: Eliminar titulo
+        //[Route("/id")]
         [HttpDelete]
         public IActionResult Delete(int tituloID)
         {
