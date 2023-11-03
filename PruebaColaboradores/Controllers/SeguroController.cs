@@ -17,8 +17,7 @@ namespace WebApplication2.Controllers
             _logger = logger;
             _aplicacionContexto = aplicacionContexto;
         }
-        //Create: Crear Seguro
-        //[Route("")]
+
         [HttpPost]
         public IActionResult Post(
             [FromBody] Seguro seguro)
@@ -27,8 +26,7 @@ namespace WebApplication2.Controllers
             _aplicacionContexto.SaveChanges();
             return Ok(seguro);
         }
-        //READ: Obtener lista de Seguros
-        //[Route("")]
+
         [HttpGet]
 
         public IEnumerable<Seguro> Get()
@@ -36,8 +34,7 @@ namespace WebApplication2.Controllers
             return _aplicacionContexto.Seguros.ToList();
         }
 
-        //Update: Modificar Seguro
-        //[Route("/id")]
+
         [HttpPut]
         public IActionResult Put([FromBody] Seguro seguro)
         {
@@ -46,8 +43,7 @@ namespace WebApplication2.Controllers
             return Ok(seguro);
 
         }
-        //Delete: Eliminar Seguro
-        //[Route("/id")]
+
         [HttpDelete]
         public IActionResult Delete(int seguroID)
         {
